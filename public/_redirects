@@ -1,3 +1,0 @@
-# SPA fallback is configured in wrangler.toml:
-#   [assets] not_found_handling = "single-page-application"
-# Do not add /* → /index.html here — Workers rejects it as an infinite loop.

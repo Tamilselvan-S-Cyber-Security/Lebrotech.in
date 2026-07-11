@@ -44,6 +44,13 @@ if (!fs.existsSync(staticDir)) {
   process.exit(1);
 }
 
+// Workers + not_found_handling SPA: /* → /index.html in _redirects causes API error 100324
+const redirectsPath = path.join(buildDir, "_redirects");
+if (fs.existsSync(redirectsPath)) {
+  fs.unlinkSync(redirectsPath);
+  console.log("Removed build/_redirects (SPA handled by wrangler.toml).");
+}
+
 console.log("Deploying build/ → Worker lebrotechs (static assets)…");
 runWrangler(["deploy"]);
 console.log("Deploy finished.");
