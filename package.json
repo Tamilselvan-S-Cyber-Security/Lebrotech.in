@@ -68,9 +68,9 @@
     "build": "craco build",
     "test": "craco test",
     "pages:build": "npm run build",
-    "deploy": "wrangler deploy --commit-dirty=true",
+    "deploy": "node scripts/cf-deploy.js",
     "pages:deploy": "node scripts/pages-deploy.js",
-    "pages:preview": "npm run build && wrangler dev"
+    "pages:preview": "npm run build && wrangler pages dev build"
   },
   "engines": {
     "node": ">=18"

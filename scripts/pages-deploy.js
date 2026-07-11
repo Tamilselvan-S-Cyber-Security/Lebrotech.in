@@ -30,8 +30,8 @@ if (!fs.existsSync(versionPath)) {
 const version = JSON.parse(fs.readFileSync(versionPath, "utf8"));
 console.log(`\nBuild ID: ${version.buildId}`);
 
-console.log("\n[3/3] Deploying build/ → Cloudflare (lebrotechs)…");
-run("npx", ["wrangler", "deploy", "--commit-dirty=true"]);
+console.log("\n[3/3] Deploying build/ → Cloudflare Pages (lebrotechs)…");
+run("node", ["scripts/cf-deploy.js"]);
 
 console.log(`
 ────────────────────────────────────────

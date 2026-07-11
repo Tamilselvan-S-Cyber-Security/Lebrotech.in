@@ -1,16 +1,12 @@
-# Cloudflare Workers static assets (CRA → build/)
+# Cloudflare Pages (CRA → build/)
 #
-# In Cloudflare → Settings → Builds, set Deploy command to ONLY this:
-#   npm run deploy
+# Dashboard:
+#   Build command:   npm run build
+#   Deploy command:  npm run deploy
 #
-# Build command:
-#   npm run build
-#
-# Env: NODE_VERSION=20, DISABLE_ESLINT_PLUGIN=true, REACT_APP_*, CLOUDFLARE_API_TOKEN (Workers Scripts Edit)
+# Env: NODE_VERSION=20, DISABLE_ESLINT_PLUGIN=true, REACT_APP_*
+#      CLOUDFLARE_API_TOKEN with Account → Cloudflare Pages → Edit
 
 name = "lebrotechs"
 compatibility_date = "2026-07-01"
-
-[assets]
-directory = "./build"
-not_found_handling = "single-page-application"
+pages_build_output_dir = "build"
