@@ -1,27 +1,24 @@
-# Cloudflare Workers (static assets) — Lebro Tech frontend (CRA / craco)
+# Cloudflare Pages — Lebro Tech frontend (CRA / craco)
 #
-# Cloudflare dashboard build settings (copy exactly — do not change):
-#   Build command:  npm run build
-#   Deploy command: npx wrangler deploy
-#   (Do NOT use wrangler pages deploy)
+# DASHBOARD SETTINGS (copy exactly):
+#
+#   Build command:           npm run build
+#   Build output directory:  build
+#   Deploy command:          (LEAVE THIS EMPTY — delete any text there)
+#
+#   Do NOT paste placeholders. Do NOT use:
+#     wrangler pages deploy
+#     --project-name=EXACT_NAME_FROM_DASHBOARD
 #
 # Env vars: NODE_VERSION=20
 #           DISABLE_ESLINT_PLUGIN=true
-#           CLOUDFLARE_API_TOKEN=(secret — Workers Scripts Edit)
 #           + all REACT_APP_* from .env / .env.example
+#           (CLOUDFLARE_API_TOKEN is NOT needed if Deploy command is empty)
 #
-# CLI:
+# CLI (optional, from your PC):
 #   npx wrangler login
-#   npm run build && npx wrangler deploy
-#
-# After go-live:
-#   1) Add domain to Firebase Auth → Authorized domains
-#   2) Add origin to admin API CORS_ORIGINS on Vercel
-#   3) Caching → Purge Everything if UI still looks old
+#   npm run pages:deploy
 
 name = "lebrotechs"
 compatibility_date = "2026-07-01"
-
-[assets]
-directory = "./build"
-not_found_handling = "single-page-application"
+pages_build_output_dir = "build"
