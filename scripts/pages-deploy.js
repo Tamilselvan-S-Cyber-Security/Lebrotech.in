@@ -30,13 +30,13 @@ if (!fs.existsSync(versionPath)) {
 const version = JSON.parse(fs.readFileSync(versionPath, "utf8"));
 console.log(`\nBuild ID: ${version.buildId}`);
 
-console.log("\n[3/3] Deploying build/ → Cloudflare Pages (lerbo-tech)…");
+console.log("\n[3/3] Deploying build/ → Cloudflare Pages (lebrotechs)…");
 run("npx", [
   "wrangler",
   "pages",
   "deploy",
   "build",
-  "--project-name=lerbo-tech",
+  "--project-name=lebrotechs",
   "--commit-dirty=true",
 ]);
 
@@ -52,6 +52,6 @@ Deploy finished. Verify the NEW version:
   3) Cloudflare Dashboard → Caching → Configuration → Purge Everything
      (if custom domain still shows old UI)
 
-  4) Pages → lerbo-tech → Deployments → confirm latest is Active
+  4) Pages → lebrotechs → Deployments → confirm latest is Active
 ────────────────────────────────────────
 `);

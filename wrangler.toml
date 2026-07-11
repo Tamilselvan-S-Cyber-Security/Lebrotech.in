@@ -23,6 +23,6 @@
 #   2) Add origin to admin API CORS_ORIGINS on Vercel
 #   3) Caching → Purge Everything if UI still looks old
 
-name = "lerbo-tech"
+name = "lebrotechs"
 compatibility_date = "2026-07-01"
 pages_build_output_dir = "build"
