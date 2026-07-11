@@ -1,24 +1,16 @@
-# Cloudflare Pages — Lebro Tech frontend (CRA / craco)
+# Cloudflare Workers static assets (CRA → build/)
 #
-# DASHBOARD SETTINGS (copy exactly):
+# In Cloudflare → Settings → Builds, set Deploy command to ONLY this:
+#   npm run deploy
 #
-#   Build command:           npm run build
-#   Build output directory:  build
-#   Deploy command:          (LEAVE THIS EMPTY — delete any text there)
+# Build command:
+#   npm run build
 #
-#   Do NOT paste placeholders. Do NOT use:
-#     wrangler pages deploy
-#     --project-name=EXACT_NAME_FROM_DASHBOARD
-#
-# Env vars: NODE_VERSION=20
-#           DISABLE_ESLINT_PLUGIN=true
-#           + all REACT_APP_* from .env / .env.example
-#           (CLOUDFLARE_API_TOKEN is NOT needed if Deploy command is empty)
-#
-# CLI (optional, from your PC):
-#   npx wrangler login
-#   npm run pages:deploy
+# Env: NODE_VERSION=20, DISABLE_ESLINT_PLUGIN=true, REACT_APP_*, CLOUDFLARE_API_TOKEN (Workers Scripts Edit)
 
 name = "lebrotechs"
 compatibility_date = "2026-07-01"
-pages_build_output_dir = "build"
+
+[assets]
+directory = "./build"
+not_found_handling = "single-page-application"
