@@ -1,11 +1,13 @@
 # Cloudflare Workers (static assets) — Lebro Tech frontend (CRA / craco)
 #
-# Dashboard deploy command can stay: npx wrangler deploy
-# Build command: npm run build
-# Build output is read from [assets].directory below (build/)
+# Cloudflare dashboard build settings (copy exactly — do not change):
+#   Build command:  npm run build
+#   Deploy command: npx wrangler deploy
+#   (Do NOT use wrangler pages deploy)
 #
 # Env vars: NODE_VERSION=20
 #           DISABLE_ESLINT_PLUGIN=true
+#           CLOUDFLARE_API_TOKEN=(secret — Workers Scripts Edit)
 #           + all REACT_APP_* from .env / .env.example
 #
 # CLI:
