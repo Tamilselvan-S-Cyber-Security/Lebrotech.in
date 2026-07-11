@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/set-state-in-effect, react/no-unescaped-entities */
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from "react";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import { ADMIN_NAV } from "@/lib/nav";

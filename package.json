@@ -65,7 +65,7 @@
     "start": "node scripts/start-dev.js",
     "dev": "node scripts/start-dev.js",
     "prebuild": "node scripts/write-build-meta.js",
-    "build": "craco build",
+    "build": "node scripts/craco-build.js",
     "test": "craco test",
     "pages:build": "npm run build",
     "deploy": "node scripts/cf-deploy.js",

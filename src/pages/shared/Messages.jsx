@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities, react-hooks/set-state-in-effect */
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import DashboardLayout from "@/components/layout/DashboardLayout";

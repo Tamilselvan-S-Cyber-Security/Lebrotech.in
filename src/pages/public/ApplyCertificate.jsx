@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities, react-hooks/set-state-in-effect */
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";

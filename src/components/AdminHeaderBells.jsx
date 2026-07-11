@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/set-state-in-effect */
+
 import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { IconBell as Bell, IconActivity as ActivityIcon, IconShieldAlert as ShieldAlert } from "@/components/icons/AppIcons";
