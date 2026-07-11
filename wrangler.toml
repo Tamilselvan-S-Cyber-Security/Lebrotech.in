@@ -1,15 +1,17 @@
-# Cloudflare Workers — serves CRA output from build/
+# Cloudflare Workers — static assets from CRA `build/`
 #
-# Dashboard:
+# Dashboard (exact):
 #   Build command:   npm run build
 #   Deploy command:  npm run deploy
 #
-# After deploy open: https://lebrotechs.<your-subdomain>.workers.dev
-# (not a leftover Hello World Worker — this overwrites it with build/)
+# Env: NODE_VERSION=20, DISABLE_ESLINT_PLUGIN=true, all REACT_APP_*
+#      CLOUDFLARE_API_TOKEN → Account: Workers Scripts Edit
 
 name = "lebrotechs"
 compatibility_date = "2026-07-01"
+workers_dev = true
 
 [assets]
 directory = "./build"
 not_found_handling = "single-page-application"
+html_handling = "auto-trailing-slash"

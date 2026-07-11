@@ -1,5 +1,5 @@
 /**
- * Build + deploy to Cloudflare Pages and print how to verify the new version.
+ * Local: build + deploy to Cloudflare Worker lebrotechs.
  * Requires: npx wrangler login  (or CLOUDFLARE_API_TOKEN)
  */
 const { spawnSync } = require("child_process");
@@ -35,15 +35,10 @@ run("node", ["scripts/cf-deploy.js"]);
 
 console.log(`
 ────────────────────────────────────────
-Deploy finished. Verify the NEW version:
+Deploy finished. Verify:
 
-  1) Open:  https://YOUR_DOMAIN/version.json
-     Expect buildId: ${version.buildId}
-
-  2) Title should be "Lerbo Tech — …" (not "Hello World")
-
-  3) Hard refresh: Ctrl+Shift+R
-
-  4) Workers & Pages → lebrotechs → confirm latest deployment
+  1) https://YOUR_DOMAIN/version.json  → buildId ${version.buildId}
+  2) Page title is Lerbo Tech (not Hello World)
+  3) Hard refresh if CDN cache is stale
 ────────────────────────────────────────
 `);
