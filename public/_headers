@@ -1,0 +1,54 @@
+# Default: do NOT cache HTML / SPA routes (stale HTML keeps old JS forever).
+# More specific paths below override this for hashed assets.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cache-Control: no-cache, no-store, must-revalidate
+  CDN-Cache-Control: no-store
+  Cloudflare-CDN-Cache-Control: no-store
+
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+  CDN-Cache-Control: no-store
+  Cloudflare-CDN-Cache-Control: no-store
+
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  CDN-Cache-Control: no-store
+  Cloudflare-CDN-Cache-Control: no-store
+
+/version.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  CDN-Cache-Control: no-store
+  Cloudflare-CDN-Cache-Control: no-store
+  Content-Type: application/json
+
+/manifest.json
+  Cache-Control: no-cache, must-revalidate
+  CDN-Cache-Control: no-store
+
+# Hashed CRA bundles — safe to cache forever (filename changes every build)
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+  CDN-Cache-Control: public, max-age=31536000, immutable
+
+# Public media — short TTL so asset updates show up
+/logo/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/image/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/bot/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/ai/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/placement/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/intern-company/*
+  Cache-Control: public, max-age=3600, must-revalidate

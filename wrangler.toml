@@ -1,0 +1,28 @@
+# Cloudflare Pages — Lerbo Tech frontend (CRA / craco)
+#
+# WHY OLD VERSION SHOWS AFTER DEPLOY
+#   Stale HTML/CDN cache keeps pointing at old /static/js/main.*.js
+#   Fix: public/_headers forces no-store on HTML; purge CF cache once;
+#   then verify https://YOUR_DOMAIN/version.json matches the new buildId.
+#
+# Dashboard (Git connect):
+#   Framework preset: Create React App
+#   Build command:    npm run build
+#   Build output:     build
+#   Root directory:   frontend   (if repo root is Oaxis-main)
+#   Env vars:         NODE_VERSION=20
+#                     DISABLE_ESLINT_PLUGIN=true
+#                     + all REACT_APP_* from .env / .env.example
+#
+# CLI (always rebuilds, then uploads):
+#   npx wrangler login
+#   npm run pages:deploy
+#
+# After go-live:
+#   1) Add domain to Firebase Auth → Authorized domains
+#   2) Add origin to admin API CORS_ORIGINS on Vercel
+#   3) Caching → Purge Everything if UI still looks old
+
+name = "lerbo-tech"
+compatibility_date = "2026-07-01"
+pages_build_output_dir = "build"

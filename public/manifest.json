@@ -1,0 +1,30 @@
+{
+  "short_name": "Lerbo Tech",
+  "name": "Lerbo Tech — Get Your Internship Certificate",
+  "description": "Apply for verified internships, pass verification and validation, and get your official internship certificate.",
+  "icons": [
+    {
+      "src": "logo/logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo/logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#D92D20",
+  "background_color": "#FFFFFF",
+  "lang": "en-IN"
+}
