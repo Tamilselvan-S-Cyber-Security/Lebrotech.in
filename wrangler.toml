@@ -1,12 +1,14 @@
 # Cloudflare Workers — static assets from CRA `build/`
 #
-# Dashboard (exact):
+# Dashboard (exact — copy these):
+#   Root directory:  (leave EMPTY — do not use build or frontend)
 #   Build command:   npm run build
 #   Deploy command:  npm run deploy
+#   Branch:          main
 #
-# Env: NODE_VERSION=20 (or 22), DISABLE_ESLINT_PLUGIN=true, all REACT_APP_*
+# Env: NODE_VERSION=20, DISABLE_ESLINT_PLUGIN=true, all REACT_APP_*
 #      CLOUDFLARE_API_TOKEN → Account: Workers Scripts Edit
-#      Wrangler is pinned to 4.86.0 for Node 20 CI compatibility.
+#      Wrangler pinned to 4.86.0 for Node 20 CI
 
 name = "lebrotechs"
 compatibility_date = "2026-05-03"
