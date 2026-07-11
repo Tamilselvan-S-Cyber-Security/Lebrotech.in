@@ -5,11 +5,12 @@
 #   Fix: public/_headers forces no-store on HTML; purge CF cache once;
 #   then verify https://YOUR_DOMAIN/version.json matches the new buildId.
 #
-# Dashboard (Git connect):
+# Dashboard (Git connect) — MUST use Pages deploy, NOT `wrangler deploy`:
 #   Framework preset: Create React App
 #   Build command:    npm run build
 #   Build output:     build
-#   Root directory:   frontend   (if repo root is Oaxis-main)
+#   Deploy command:   npx wrangler pages deploy build --project-name=lebrotechs
+#                     (or leave Deploy command EMPTY so Pages uploads build/)
 #   Env vars:         NODE_VERSION=20
 #                     DISABLE_ESLINT_PLUGIN=true
 #                     + all REACT_APP_* from .env / .env.example
