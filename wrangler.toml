@@ -1,12 +1,15 @@
-# Cloudflare Pages (CRA → build/)
+# Cloudflare Workers — serves CRA output from build/
 #
 # Dashboard:
 #   Build command:   npm run build
 #   Deploy command:  npm run deploy
 #
-# Env: NODE_VERSION=20, DISABLE_ESLINT_PLUGIN=true, REACT_APP_*
-#      CLOUDFLARE_API_TOKEN with Account → Cloudflare Pages → Edit
+# After deploy open: https://lebrotechs.<your-subdomain>.workers.dev
+# (not a leftover Hello World Worker — this overwrites it with build/)
 
 name = "lebrotechs"
 compatibility_date = "2026-07-01"
-pages_build_output_dir = "build"
+
+[assets]
+directory = "./build"
+not_found_handling = "single-page-application"

@@ -30,7 +30,7 @@ if (!fs.existsSync(versionPath)) {
 const version = JSON.parse(fs.readFileSync(versionPath, "utf8"));
 console.log(`\nBuild ID: ${version.buildId}`);
 
-console.log("\n[3/3] Deploying build/ → Cloudflare Pages (lebrotechs)…");
+console.log("\n[3/3] Deploying build/ → Cloudflare Worker (lebrotechs)…");
 run("node", ["scripts/cf-deploy.js"]);
 
 console.log(`
@@ -40,11 +40,10 @@ Deploy finished. Verify the NEW version:
   1) Open:  https://YOUR_DOMAIN/version.json
      Expect buildId: ${version.buildId}
 
-  2) Hard refresh: Ctrl+Shift+R (or clear cache)
+  2) Title should be "Lerbo Tech — …" (not "Hello World")
 
-  3) Cloudflare Dashboard → Caching → Configuration → Purge Everything
-     (if custom domain still shows old UI)
+  3) Hard refresh: Ctrl+Shift+R
 
-  4) Workers & Pages → lebrotechs → Deployments → confirm latest is Active
+  4) Workers & Pages → lebrotechs → confirm latest deployment
 ────────────────────────────────────────
 `);
