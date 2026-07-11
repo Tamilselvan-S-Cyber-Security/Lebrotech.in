@@ -31,5 +31,5 @@ if (!html.includes("Lerbo Tech") && !html.includes("root")) {
 }
 
 console.log("Deploying build/ → Worker lebrotechs (static assets)…");
-run(["deploy", "--commit-dirty=true"]);
+run(["deploy"]);
 console.log("Deploy finished. Open the workers.dev URL from the wrangler output.");
