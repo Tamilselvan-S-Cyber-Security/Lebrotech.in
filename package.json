@@ -70,7 +70,8 @@
     "pages:build": "npm run build",
     "deploy": "node scripts/cf-deploy.js",
     "pages:deploy": "node scripts/pages-deploy.js",
-    "pages:preview": "npm run build && wrangler dev"
+    "preview": "npm run build && wrangler dev",
+    "pages:preview": "npm run preview"
   },
   "engines": {
     "node": ">=18"

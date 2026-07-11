@@ -9,7 +9,7 @@
 #      Wrangler is pinned to 4.86.0 for Node 20 CI compatibility.
 
 name = "lebrotechs"
-compatibility_date = "2026-07-01"
+compatibility_date = "2026-05-03"
 workers_dev = true
 
 [assets]
