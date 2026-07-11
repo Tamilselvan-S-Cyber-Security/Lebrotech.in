@@ -37,6 +37,7 @@ run([
   "deploy",
   "build",
   `--project-name=${PROJECT}`,
+  "--branch=main",
   "--commit-dirty=true",
 ]);
 
